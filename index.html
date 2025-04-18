@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế Hoạch Livestream 2 Tiếng - Chi Tiết</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .section-title:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+            border-radius: 5px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e0e0e0;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff758c;
+            z-index: 1;
+        }
+        
+        .timeline-time {
+            font-weight: 600;
+            color: #ff758c;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-content {
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        
+        .product-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background-color: #e0f7fa;
+            color: #00838f;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .price-tag {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+        
+        .script-container {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-style: italic;
+            border-left: 3px solid #ff758c;
+        }
+        
+        .checklist-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        
+        .tag-ao {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .tag-vay {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .tag-quan {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .tag-set {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+        
+        .tag-cv {
+            background-color: #fce4ec;
+            color: #c2185b;
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .expand-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .expand-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .expand-btn i {
+            margin-right: 5px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .card {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header text-center">
+            <h1 class="text-3xl font-bold mb-2">KẾ HOẠCH LIVESTREAM 2 TIẾNG</h1>
+            <p class="text-lg">Thời trang nữ - Tháng 4 (Ban ngày nắng, tối lạnh)</p>
+        </div>
+        
+        <!-- PHẦN 1: CHUẨN BỊ -->
+        <div class="mb-10">
+            <h2 class="section-title text-2xl">PHẦN 1: CHUẨN BỊ (Trước buổi livestream)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Chuẩn bị sản phẩm -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-pink-600">
+                        <i class="fas fa-tshirt mr-2"></i>Chuẩn bị sản phẩm
+                    </h3>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Trưng bày sản phẩm theo outfit:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>5-6 outfit hoàn chỉnh (15-18 sản phẩm)</li>
+                                <li>Sắp xếp theo thứ tự trình bày</li>
+                                <li>Chuẩn bị sản phẩm đã ủi phẳng, sạch sẽ</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Chuẩn bị thẻ thông tin mỗi sản phẩm:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>Mã SKU, kích thước, chất liệu</li>
+                                <li>Giá gốc và giá khuyến mãi</li>
+                                <li>Đặc tính nổi bật của sản phẩm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Thiết lập kỹ thuật -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-blue-600">
+                        <i class="fas fa-video mr-2"></i>Thiết lập kỹ thuật
+                    </h3>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Bố trí không gian livestream:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>Phông nền sáng, đơn giản (trắng hoặc pastel)</li>
+                                <li>Ánh sáng: 2-3 nguồn để tránh bóng</li>
+                                <li>Gương lớn để demo sản phẩm khi mặc</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Kiểm tra thiết bị:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>Camera chính và camera phụ (quay chi tiết)</li>
+                                <li>Mic có âm thanh rõ ràng</li>
+                                <li>Kết nối internet ổn định</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chuẩn bị khuyến mãi -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-yellow-600">
+                        <i class="fas fa-tags mr-2"></i>Chuẩn bị khuyến mãi
+                    </h3>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Thiết lập chương trình ưu đãi:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>Giảm 15% cho 10 người đặt hàng đầu tiên</li>
+                                <li>Combo giảm 20% khi mua 2 sản phẩm trở lên</li>
+                                <li>Flash sale: Giảm 25% trong 5 phút</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="checklist-item flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <div>
+                            <span class="font-medium">Chuẩn bị quà tặng:</span>
+                            <ul class="ml-5 mt-1 list-disc">
+                                <li>Túi tote thời trang khi mua từ 2 sản phẩm</li>
+                                <li>Phiếu giảm giá 50.000 VND cho lần mua sau</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Danh sách sản phẩm trình bày -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-purple-600">
+                        <i class="fas fa-list-ul mr-2"></i>Danh sách sản phẩm chính
+                    </h3>
+                    <div class="overflow-auto max-h-80">
+                        <table class="min-w-full">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-2 px-2 text-left text-xs">Mã SKU</th>
+                                    <th class="py-2 px-2 text-left text-xs">Loại</th>
+                                    <th class="py-2 px-2 text-right text-xs">Giá (VND)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-xs">
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">S-6892-BE</td>
+                                    <td class="py-2 px-2"><span class="tag tag-set">Set</span></td>
+                                    <td class="py-2 px-2 text-right">631.557</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-1315-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">290.492</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">CV-662-HOG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-cv">Chân váy</span></td>
+                                    <td class="py-2 px-2 text-right">290.492</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-9272-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo phông</span></td>
+                                    <td class="py-2 px-2 text-right">272.541</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">Q-10829-HOG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-quan">Quần</span></td>
+                                    <td class="py-2 px-2 text-right">198.361</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-8139-XDT</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">199.016</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">V-8502-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-vay">Váy</span></td>
+                                    <td class="py-2 px-2 text-right">272.541</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">S-24159-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-set">Set</span></td>
+                                    <td class="py-2 px-2 text-right">408.607</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-6659-DEN</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">219.590</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">V-11152-BE</td>
+                                    <td class="py-2 px-2"><span class="tag tag-vay">Váy</span></td>
+                                    <td class="py-2 px-2 text-right">350.328</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-620-D5-HOG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">302.459</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-9126-DEN</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo phông</span></td>
+                                    <td class="py-2 px-2 text-right">314.426</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">Q-303-VAG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-quan">Quần</span></td>
+                                    <td class="py-2 px-2 text-right">272.541</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">H-6060-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Hàng hiệu</span></td>
+                                    <td class="py-2 px-2 text-right">314.426</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">A-2612-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">122.951</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">Q-8265-TRG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-quan">Quần</span></td>
+                                    <td class="py-2 px-2 text-right">122.951</td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <td class="py-2 px-2">Q-819-XAM</td>
+                                    <td class="py-2 px-2"><span class="tag tag-quan">Quần</span></td>
+                                    <td class="py-2 px-2 text-right">122.951</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-2">A-2612-HNG</td>
+                                    <td class="py-2 px-2"><span class="tag tag-ao">Áo</span></td>
+                                    <td class="py-2 px-2 text-right">122.951</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PHẦN 2: KỊCH BẢN LIVESTREAM -->
+        <div class="mb-10">
+            <h2 class="section-title text-2xl">PHẦN 2: KỊCH BẢN LIVESTREAM CHI TIẾT</h2>
+            
+            <!-- Timeline -->
+            <div class="card">
+                <div class="timeline">
+                    <!-- Mở đầu -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">00:00 - 00:05 (5 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Mở đầu</h4>
+                            <div class="mt-2">
+                                <p>• Chào mừng khách hàng</p>
+                                <p>• Giới thiệu tổng quan về các outfit sẽ trình bày</p>
+                                <p>• Nhấn mạnh ưu đãi đặc biệt trong buổi livestream</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-1">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script mở đầu:</strong> "Xin chào các chị em thân mến! Hôm nay chúng ta sẽ cùng nhau khám phá những items thời trang cực hot và đa năng cho thời tiết tháng 4 - ban ngày nắng, tối lạnh. Tôi đã chuẩn bị những outfit từ công sở đến dạo phố, từ năng động đến thanh lịch, tất cả đều giúp chị em tỏa sáng trong mọi hoàn cảnh. Đặc biệt, hôm nay chúng ta có chương trình ưu đãi cực sốc: giảm 15% cho 10 người đặt hàng đầu tiên, giảm 20% khi mua combo, và nhiều quà tặng hấp dẫn khác nữa. Hãy theo dõi từ đầu đến cuối để không bỏ lỡ bất kỳ deal nào nhé!"</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-1')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outfit Cao Cấp -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">00:05 - 00:20 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Outfit Cao Cấp - Mở đầu ấn tượng</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">S-6892-BE (Set)</span>
+                                <span class="product-tag price-tag">631.557 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu set đồ cao cấp</p>
+                                <p>• Lý giải giá trị cao cấp, chất liệu và cách phối phụ kiện</p>
+                                <p>• Zoom vào chi tiết đường may, chất liệu, kiểu dáng</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-2">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Mở đầu buổi livestream hôm nay, tôi muốn giới thiệu đến chị em set đồ cao cấp S-6892-BE. Đây là set đồ hoàn hảo cho những chị em muốn vừa thanh lịch vừa nổi bật. Chất liệu linen blend cao cấp, mềm mại, thoáng mát, phù hợp với thời tiết ban ngày, nhưng đủ dày để giữ ấm vào buổi tối. Màu be sang trọng này đang là xu hướng hot nhất Xuân-Hè 2025, được các fashionista Hàn Quốc và Nhật Bản ưa chuộng. Set đồ này đặc biệt phù hợp với những chị em có làn da ngăm, tạo nên vẻ đẹp sang trọng, tinh tế."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-2')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outfit Công Sở Thanh Lịch -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">00:20 - 00:35 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Outfit Công Sở Thanh Lịch</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">A-1315-TRG (Áo)</span>
+                                <span class="product-tag">CV-662-HOG (Chân váy)</span>
+                                <span class="product-tag price-tag">290.492 VND/SP</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu set đồ công sở thanh lịch, hiện đại</p>
+                                <p>• Mini-game: "Đoán giá combo" - Giảm thêm 5% cho người thắng</p>
+                                <p>• Flash sale: Giảm 25% cho combo trong 5 phút</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-3">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Tiếp theo, tôi xin giới thiệu set đồ công sở cực kỳ thanh lịch và hiện đại. Áo A-1315-TRG làm từ chất liệu cotton pha lụa, mềm mại, không nhăn, không cần là nhiều. Phần cổ áo thiết kế tinh tế, vừa kín đáo vừa tôn vẻ nữ tính. Kết hợp với chân váy CV-662-HOG màu hồng pastel đang rất hot trong mùa này. Chân váy có lớp lót bên trong, co giãn nhẹ, giúp các chị em thoải mái di chuyển cả ngày. Set đồ này vừa chuyên nghiệp cho môi trường công sở, vừa đủ nổi bật để thu hút mọi ánh nhìn."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-3')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outfit Trẻ Trung Năng Động -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">00:35 - 00:50 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Outfit Trẻ Trung Năng Động</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">A-9272-TRG (Áo phông)</span>
+                                <span class="product-tag price-tag">272.541 VND</span>
+                                <span class="product-tag">Q-10829-HOG (Quần)</span>
+                                <span class="product-tag price-tag">198.361 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu phong cách trẻ trung, năng động</p>
+                                <p>• Tương tác: Hỏi khách hàng thường đi đâu vào cuối tuần</p>
+                                <p>• Ưu đãi: Tặng kèm vòng tay handmade khi mua combo</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-4">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Chuyển sang phong cách trẻ trung, năng động hơn với combo áo phông A-9272-TRG và quần Q-10829-HOG. Áo phông oversize đang là xu hướng được Gen Z và Millennials yêu thích. Chất cotton 100% dày dặn, thấm hút mồ hôi tốt, phù hợp cho ngày nắng. Form áo rộng nhưng không luộm thuộm, cực kỳ tôn dáng. Quần màu hồng chất liệu kaki mềm, co giãn 4 chiều, đi cả ngày không bị nhăn, không bị xù. Đặc biệt, quần có túi sâu, rất tiện lợi để đựng điện thoại, chìa khóa. Outfit này phù hợp cho đi café, shopping, dạo phố cuối tuần."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-4')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outfit Dịu Dàng Nữ Tính -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">00:50 - 01:05 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Outfit Dịu Dàng Nữ Tính</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">A-8139-XDT (Áo)</span>
+                                <span class="product-tag price-tag">199.016 VND</span>
+                                <span class="product-tag">V-8502-TRG (Váy)</span>
+                                <span class="product-tag price-tag">272.541 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu phong cách dịu dàng, nữ tính</p>
+                                <p>• Câu chuyện: Xu hướng màu pastel và cách phối đồ của người nổi tiếng</p>
+                                <p>• Mẹo: Cách phối thêm áo khoác mỏng khi trời lạnh buổi tối</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-5">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Set đồ tiếp theo sẽ mang đến vẻ dịu dàng, nữ tính cho các chị em. Áo A-8139-XDT màu xanh đậm làm từ chất liệu lụa mát, siêu nhẹ, phù hợp với ngày nắng. Thiết kế cổ chữ V tinh tế, tôn vòng một và xương quai xanh. Kết hợp với váy V-8502-TRG màu trắng vừa thanh lịch vừa trẻ trung. Váy có lớp lót cotton bên trong, không lo lộ, thoải mái vận động. Chiều dài váy qua gối, kín đáo nhưng không già. Đặc biệt, cả áo và váy đều có thể mix-match với nhiều items khác trong tủ đồ của chị em."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-5')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Set Đồ Hoàn Chỉnh Cho Buổi Tối -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">01:05 - 01:20 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Set Đồ Hoàn Chỉnh Cho Buổi Tối</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">S-24159-TRG (Set)</span>
+                                <span class="product-tag price-tag">408.607 VND</span>
+                                <span class="product-tag">A-6659-DEN (Áo)</span>
+                                <span class="product-tag price-tag">219.590 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu set đồ sang trọng cho buổi tối/sự kiện</p>
+                                <p>• Tương tác: Hỏi khách hàng thường tham dự những sự kiện nào</p>
+                                <p>• Flash sale: Giảm 30% cho set S-24159-TRG trong 5 phút</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-6">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Bước sang buổi tối, tôi xin giới thiệu set đồ cực kỳ sang trọng và ấm áp. S-24159-TRG là set đồ màu trắng tinh khôi, chất liệu cao cấp, có đính đá nhỏ tinh tế ở cổ áo, tạo điểm nhấn sang trọng. Set này rất phù hợp cho các buổi tiệc tối, hẹn hò. Kết hợp với áo khoác A-6659-DEN màu đen thanh lịch khi trời lạnh. Áo khoác có lớp lót mỏng bên trong, vừa giữ ấm vừa không làm outfit trở nên nặng nề. Đặc biệt, áo khoác này có thể mix với nhiều outfit khác, là item must-have trong tủ đồ mùa này."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-6')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outfit Công Sở Thu Hút -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">01:20 - 01:35 (15 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Outfit Công Sở Thu Hút</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">V-11152-BE (Váy)</span>
+                                <span class="product-tag price-tag">350.328 VND</span>
+                                <span class="product-tag">A-620-D5-HOG (Áo)</span>
+                                <span class="product-tag price-tag">302.459 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu phong cách công sở hiện đại</p>
+                                <p>• Chia sẻ kinh nghiệm: Cách phối màu be với các tông màu khác</p>
+                                <p>• Ưu đãi: Giảm 20% khi mua combo này</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-7">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Quay trở lại với phong cách công sở nhưng mang hơi hướng hiện đại hơn. Váy V-11152-BE màu be trang nhã là item không thể thiếu trong tủ đồ công sở. Váy có cấu trúc dáng A, tôn vòng eo, giấu bụng hiệu quả. Chất liệu cao cấp không nhăn, không xù, giữ form suốt ngày dài. Kết hợp với áo A-620-D5-HOG màu hồng tạo điểm nhấn, làm bừng sáng cả outfit. Áo có cổ cách điệu, vừa kín đáo vừa tôn nét nữ tính. Đây là set đồ được nhiều nhân viên văn phòng yêu thích vì vừa chuyên nghiệp vừa không nhàm chán."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-7')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Sản Phẩm Cao Cấp Riêng Lẻ -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">01:35 - 01:45 (10 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Sản Phẩm Cao Cấp Riêng Lẻ</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">H-6060-TRG (Hàng hiệu)</span>
+                                <span class="product-tag price-tag">314.426 VND</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu sản phẩm hàng hiệu độc đáo</p>
+                                <p>• Câu chuyện: Chia sẻ về nguồn gốc, quá trình sản xuất thủ công</p>
+                                <p>• Ưu đãi đặc biệt: Chỉ có 5 sản phẩm với giá ưu đãi</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-8">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Đặc biệt trong buổi livestream hôm nay, tôi muốn giới thiệu sản phẩm hàng hiệu H-6060-TRG. Đây là sản phẩm giới hạn, được thiết kế riêng với chất liệu nhập khẩu cao cấp. Điểm đặc biệt là phần chi tiết thêu tay tinh xảo, mỗi sản phẩm đều là độc nhất vì được thêu thủ công. Màu trắng tinh khôi nhưng không dễ bẩn nhờ công nghệ xử lý vải chống bám bẩn. Sản phẩm này có thể nâng tầm bất kỳ outfit nào, từ công sở đến dự tiệc."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-8')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Sản Phẩm Giá Tốt -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">01:45 - 01:55 (10 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Sản Phẩm Giá Tốt</h4>
+                            <div class="flex flex-wrap mt-2">
+                                <span class="product-tag">A-2612-TRG</span>
+                                <span class="product-tag">Q-8265-TRG</span>
+                                <span class="product-tag">Q-819-XAM</span>
+                                <span class="product-tag">A-2612-HNG</span>
+                                <span class="product-tag price-tag">122.951 VND/SP</span>
+                            </div>
+                            <div class="mt-2">
+                                <p>• Giới thiệu các sản phẩm basic giá tốt</p>
+                                <p>• Ưu đãi combo: Mua 3 sản phẩm giá 300.000 VND</p>
+                                <p>• Mini-game: "Mua nhanh kẻo hết" - 5 người đầu tiên được tặng kèm phụ kiện</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-9">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script giới thiệu:</strong> "Cuối cùng, tôi muốn giới thiệu một số sản phẩm với mức giá cực kỳ hấp dẫn nhưng chất lượng vẫn rất tốt. Đây là những items cơ bản, dễ phối đồ, phù hợp với mọi vóc dáng. Áo A-2612-TRG và A-2612-HNG là những áo phông basic với chất cotton 100%, mềm mịn, thấm hút tốt. Quần Q-8265-TRG và Q-819-XAM là quần basic với chất vải dày dặn, co giãn tốt, form quần tôn dáng. Đây là những sản phẩm phù hợp để mix-match hàng ngày, vừa tiết kiệm vừa thời trang."</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-9')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kết thúc và tổng kết -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-time">01:55 - 02:00 (5 phút)</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Kết thúc và tổng kết</h4>
+                            <div class="mt-2">
+                                <p>• Nhắc lại các sản phẩm hot nhất và ưu đãi đặc biệt</p>
+                                <p>• Trả lời nhanh các câu hỏi còn lại</p>
+                                <p>• Thông báo về buổi livestream tiếp theo</p>
+                            </div>
+                            
+                            <div class="collapsible-content" id="content-10">
+                                <div class="script-container mt-3">
+                                    <p><strong>Script kết thúc:</strong> "Vậy là chúng ta đã đi qua tất cả các outfit tuyệt đẹp cho thời tiết tháng 4 này rồi. Xin nhắc lại các ưu đãi đặc biệt: giảm 15% cho 10 người đặt hàng đầu tiên, giảm 20% khi mua combo, và nhiều quà tặng hấp dẫn khác. Đặc biệt, tất cả đơn hàng trong hôm nay đều được freeship toàn quốc và có thể đổi size trong vòng 7 ngày. Hãy để lại comment hoặc inbox ngay để đặt hàng các chị em nhé! Cảm ơn mọi người đã theo dõi buổi livestream hôm nay. Hẹn gặp lại vào tuần sau với nhiều mẫu mới và ưu đãi hấp dẫn hơn nữa!"</p>
+                                </div>
+                            </div>
+                            <button class="expand-btn" onclick="toggleContent('content-10')">
+                                <i class="fas fa-angle-down"></i> Xem script chi tiết
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PHẦN 3: CHIẾN THUẬT TƯƠNG TÁC -->
+        <div class="mb-10">
+            <h2 class="section-title text-2xl">PHẦN 3: CHIẾN THUẬT TƯƠNG TÁC TRONG LIVESTREAM</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Mini-game thu hút tương tác -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-green-600">
+                        <i class="fas fa-gamepad mr-2"></i>Mini-game thu hút tương tác
+                    </h3>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                            <span class="font-medium">"Đoán giá đúng"</span>
+                        </div>
+                        <p class="text-sm ml-6">Người đoán đúng giá của set combo sẽ được giảm thêm 5%</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                            <span class="font-medium">"Chia sẻ outfit"</span>
+                        </div>
+                        <p class="text-sm ml-6">Khách chia sẻ cách phối đồ, outfit hay nhất được tặng phiếu giảm giá</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                            <span class="font-medium">"Mua nhanh kẻo hết"</span>
+                        </div>
+                        <p class="text-sm ml-6">5 người đầu tiên đặt hàng được tặng kèm phụ kiện</p>
+                    </div>
+                </div>
+                
+                <!-- Chiến thuật khuyến mãi -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-red-600">
+                        <i class="fas fa-tags mr-2"></i>Chiến thuật khuyến mãi tạo áp lực
+                    </h3>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-stopwatch text-red-500 mr-2"></i>
+                            <span class="font-medium">Countdown timer</span>
+                        </div>
+                        <p class="text-sm ml-6">Đếm ngược thời gian cho các flash sale</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-cubes text-red-500 mr-2"></i>
+                            <span class="font-medium">Hiển thị số lượng</span>
+                        </div>
+                        <p class="text-sm ml-6">"Chỉ còn 3 sản phẩm size M!"</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill-wave text-red-500 mr-2"></i>
+                            <span class="font-medium">Giá đặc biệt có thời hạn</span>
+                        </div>
+                        <p class="text-sm ml-6">"Giá này chỉ áp dụng trong buổi livestream hôm nay!"</p>
+                    </div>
+                </div>
+                
+                <!-- Kỹ thuật trình bày sản phẩm -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-blue-600">
+                        <i class="fas fa-video mr-2"></i>Kỹ thuật trình bày sản phẩm
+                    </h3>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-search-plus text-blue-500 mr-2"></i>
+                            <span class="font-medium">Zoom chi tiết</span>
+                        </div>
+                        <p class="text-sm ml-6">Sử dụng camera phụ để zoom vào chi tiết đường may, chất liệu</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-tshirt text-blue-500 mr-2"></i>
+                            <span class="font-medium">Demo cách mặc</span>
+                        </div>
+                        <p class="text-sm ml-6">Mặc trực tiếp hoặc sử dụng mannequin</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-ruler text-blue-500 mr-2"></i>
+                            <span class="font-medium">So sánh kích thước</span>
+                        </div>
+                        <p class="text-sm ml-6">Sử dụng thước đo hoặc so sánh với vật dụng quen thuộc</p>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-double text-blue-500 mr-2"></i>
+                            <span class="font-medium">Chứng minh chất lượng</span>
+                        </div>
+                        <p class="text-sm ml-6">Test độ co giãn, độ thấm hút, độ bền của vải</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PHẦN 4: THEO DÕI VÀ ĐÁNH GIÁ -->
+        <div class="mb-10">
+            <h2 class="section-title text-2xl">PHẦN 4: THEO DÕI VÀ ĐÁNH GIÁ SAU LIVESTREAM</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Xử lý đơn hàng -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-indigo-600">
+                        <i class="fas fa-clipboard-list mr-2"></i>Xử lý đơn hàng
+                    </h3>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Ghi lại tất cả đơn đặt hàng trong quá trình livestream</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Liên hệ xác nhận đơn hàng ngay sau khi kết thúc livestream</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Cập nhật tình trạng đơn hàng cho khách hàng mỗi 24 giờ</span>
+                    </div>
+                </div>
+                
+                <!-- Phân tích hiệu quả -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-purple-600">
+                        <i class="fas fa-chart-line mr-2"></i>Phân tích hiệu quả
+                    </h3>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Thống kê số lượng người xem, tương tác, chuyển đổi</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Đánh giá sản phẩm bán chạy nhất và lý do</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Phân tích thời điểm có nhiều đơn hàng nhất trong suốt buổi livestream</span>
+                    </div>
+                </div>
+                
+                <!-- Kế hoạch cải thiện -->
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-4 text-teal-600">
+                        <i class="fas fa-sliders-h mr-2"></i>Kế hoạch cải thiện
+                    </h3>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Ghi chú những câu hỏi thường gặp để chuẩn bị tốt hơn cho lần sau</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Phân tích sản phẩm nào cần giới thiệu chi tiết hơn</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Điều chỉnh thời gian dành cho mỗi sản phẩm dựa trên phản hồi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="card text-center bg-gray-50">
+            <p class="text-gray-500 text-sm">© 2025 | Kế hoạch livestream thời trang nữ - Tháng 4</p>
+            <p class="text-gray-400 text-xs mt-1">Ban ngày nắng, tối lạnh</p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const button = content.nextElementSibling;
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                button.innerHTML = '<i class="fas fa-angle-down"></i> Xem script chi tiết';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                button.innerHTML = '<i class="fas fa-angle-up"></i> Ẩn script chi tiết';
+            }
+        }
+    </script>
+</body>
+</html>
